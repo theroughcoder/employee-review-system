@@ -46,7 +46,7 @@ app.use(session({
   //   autoRemove: "disabled"
   // },
   store: MongoStore.create({
-    mongoUrl: 'mongodb://127.0.0.1:27017/Employee-review-system' 
+    mongoUrl: 'mongodb+srv://employee-review-system:99277employeereviewsystem@cluster0.u5pk3ak.mongodb.net/?retryWrites=true&w=majority' 
   })
   // function(err){
   //   console.log(err); 
