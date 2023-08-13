@@ -16,6 +16,6 @@ in one part you can give feedback to others, and in another screen, you can see 
 * Delete employee
 * Admin can assign task
 * Admin can make others admin
-* Give your feedbacks
-* See feedbacks for you
+* Give your feedback
+* See feedback for you
 
