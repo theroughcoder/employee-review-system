@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo app</title>
+    <!-- css link  -->
+    <link rel="stylesheet" href="/css/assignTask.css">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/performance/create-task" method="POST">
+            <!-- app name -->
+            <h1 id="head">Assign Task</h1>
+         
+            <!-- this is second input container that has two input -->
+            <div class="sec_input input_field">
+                <div>
+                    <!-- category field  -->
+                    <p>Review For</p>
+                    <select id="review_for" name="reviewFor" required>
+                        <option value="" disabled selected>Choose a review for</option>
+                        <% for(var s of employee){ %>
+                          <option value="<%= s._id %>"><%= s.first_name %></option>
+                          <% } %>
+                       
+                    </select>
+                </div>
+               
+            </div>
+            <div class="sec_input input_field">
+                <div>
+                    <!-- category field  -->
+                    <p>Review By</p>
+                    <select id="review_by" name="reviewBy" required>
+                        <option value="" disabled selected>Choose a review by</option>
+                        <% for(var s of employee){ %>
+                          <option value="<%= s._id %>"><%= s.first_name %></option>
+                          <% } %>
+                       
+                    </select>
+                </div>
+               
+            </div>
+        
+            
+            <div id="btns">
+                <!-- add button  -->
+                <button type="submit" id="add_btn">Assign Task</button>
+                <!-- delete button  -->
+                <!-- <button type="button" id="delete_btn" onclick="submitHandler()">DELETE assign_task</button> -->
+            </div>
+        </form>
+        <form action="/user/make-admin" method="POST">
+            <!-- app name -->
+            <h1 id="head">Make Admin</h1>
+         
+            <!-- this is second input container that has two input -->
+        
+            <div class="sec_input input_field">
+                <div>
+                    <!-- category field  -->
+                
+                    <select id="review_by" name="id" required>
+                        <option value="" disabled selected>Choose an employee</option>
+                        <% for(var s of employee){ %>
+                          <option value="<%= s._id %>"><%= s.first_name %></option>
+                          <% } %>
+                       
+                    </select>
+                </div>
+               
+            </div>
+        
+            
+            <div id="btns">
+                <!-- add button  -->
+                <button type="submit" id="add_btn">Make Admin</button>
+                <!-- delete button  -->
+                <!-- <button type="button" id="delete_btn" onclick="submitHandler()">DELETE assign_task</button> -->
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

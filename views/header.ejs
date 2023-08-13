@@ -1,0 +1,45 @@
+<!-- this the header -->
+  <header>
+    
+    <div class="logo">
+      <!-- Replace 'logo.png' with the path to your logo image -->
+      <img src="logo.png" alt="Interview">
+    </div>
+    <nav>
+      <ul class="navigation">
+        <% if(locals.user && locals.user.admin) { %> 
+          <li><a href="/employees">Employee's</a></li>
+          <li><a href="/performance/feedback">Feedback</a></li>
+          <li><a href="/performance/assign-task">Assign Task</a></li>
+
+          <% }else{ %>
+            
+            <li><a href="/performance/feedback">Feedback</a></li>
+            <% } %>
+  
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <input type="text" placeholder="Search...">
+      <button>Search</button>
+    </div>
+    <% if(locals.user && locals.user.admin) { %> 
+      <div>
+        <p>Admin Account</p>
+    
+      </div>
+      <% } %>
+    <div class="user">
+      <!-- If the user is logged in, display 'Logout', otherwise display 'Login' -->
+    <% if(locals.user) { %> 
+      <!-- If the user is logged in, display 'Logout', otherwise display 'Login' -->
+      <a href="/user/sign-out">Logout</a>
+      <% }else{ %>
+        <a href="/user/sign-in">Login</a>  /
+        <a href="/user/sign-up">Signin</a>  
+        <% } %>
+      </div>
+      
+  </header>
+  <!-- <script src="/js/sign_in.js"></script>  -->
+

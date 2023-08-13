@@ -1,0 +1,39 @@
+
+    <link rel="stylesheet" href="/css/feedback.css">
+
+
+  <!-- this is feedback page -->
+    <div class="container">
+      <div class="box">
+        Your Feedbacks
+        <div id="feedback">
+            <% for(let f of feedback){ %>
+
+                <div class="feedback_item">
+                    <form action="/performance/submit-feedback/<%=f._id%>" method="POST">
+                        <p><%=f.reviewFor.first_name %></p>
+                        <textarea name="feedback" cols="40" rows="3"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+          <%  } %>
+        </div>
+      </div>
+      <div class="box">
+        Feedbacks for you 
+        <div id="others_feedback">
+            <% for(let f of othersFeedback){ %>
+
+                <div class="others_feedback_item">
+                  
+                        <p>Feedback By: <%=f.reviewBy.first_name %></p>
+                        <p>Feedback : <%=f.feedback%></p>
+            
+                </div>
+          <%} %>
+        </div>
+      </div>
+    </div>
+    <script src="/js/home.js"></script>
+
+

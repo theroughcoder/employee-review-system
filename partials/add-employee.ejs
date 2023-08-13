@@ -1,0 +1,30 @@
+<!-- partial form for adding employees by admin  -->
+<form action="/employees/create" method="POST">
+   <div id="top">
+       <h2 id = "head">Add Employee</h2>
+        <button class="cancel">X</button>
+   </div>
+    <!-- first name -->
+    <label for="firstName">First Name</label>
+    <input type="text" id="firstName" name="first_name" required>
+    <!-- last name -->
+    <label for="lastName">Last Name</label>
+    <input type="text" id="lastName" name="last_name" required>
+    <!-- email  -->
+    <label for="email">Email Address</label>
+    <input type="email" id="email"  name="email" required>
+    <!-- password -->
+    
+    <label for="password">Password</label>
+    <input type="text" id="password" name="password" required>
+    <!-- confirmed password -->
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="text" id="confirmPassword" name="c_password" required>
+    <!-- check box  -->
+    <div class="checkbox">
+        <input type="checkbox" id="termsCheckbox" required>
+        <label for="termsCheckbox">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
+    </div>
+
+    <button type="submit">Sign Up</button>
+</form>

@@ -1,0 +1,51 @@
+/* css for feedback page  */
+.container {
+    margin: 0 auto;
+    height: 500px;
+    padding: 20px;
+    background-color: #ffffff33;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(100, 99, 99, 0.1);
+    display: flex;
+    
+}
+.box{
+    width: 40%;
+    height: 80%;
+    margin: 5%;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+}
+#feedback{
+    height: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(100, 99, 99, 0.1);
+    overflow: auto;
+}
+#others_feedback{
+    height: 90%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(100, 99, 99, 0.1);
+    overflow: auto;
+}
+.feedback_item{
+    margin: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.514);
+
+}
+.others_feedback_item{
+    margin: 5px;
+    border: 1.1px solid #ccc;
+    font-size: 1.1rem;
+    background-color: rgba(255, 255, 255, 0.514);
+    padding: 5px; 
+} 
+#btn{
+    margin: auto;
+    display:block;
+}

@@ -1,0 +1,24 @@
+<!-- partial form for editing employees info  -->
+<form action="/employees/edit" method="POST">
+    <div id="top">
+        <h2 id = "head">Edit Employee</h2>
+         <button type="button" class="cancel">X</button>
+    </div>
+     <!-- first name -->
+     <label for="first">First Name</label>
+     <input type="text" id="first" name="first_name" required>
+     <!-- last name -->
+     <label for="last">Last Name</label>
+     <input type="text" id="last" name="last_name" required>
+     <!-- email  -->
+     <label for="mail">Email Address</label>
+     <input type="email" id="mail"  name="email" required>
+   
+     <!-- check box  -->
+     <div class="checkbox">
+         <input type="checkbox" id="termsCheckbox" required>
+         <label for="termsCheckbox">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.</label>
+     </div>
+ 
+     <button type="submit">Edit</button>
+ </form>

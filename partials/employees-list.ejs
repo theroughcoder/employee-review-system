@@ -1,0 +1,36 @@
+<div id="top">
+    <!-- app name -->
+    <h1 id="head">Employee's</h1>
+    <!-- this is checklist input container  -->
+    
+    <div id="btns">
+        <!-- add button  -->
+        <button  id="add_btn">Add Employee </button>
+        <!-- delete button  -->
+        <!-- <button type="button" id="delete_btn" onclick="submitHandler()">DELETE employee</button> -->
+    </div>
+</div>
+<!-- list that displays the employees  -->
+<div id="employee_list" >
+    <% for(let i = 0; i < employee.length ; i++ ) { %>
+    <div class="employee_items"> 
+        <!-- <input type="checkbox" name="employees" value='<%= employee[i]._id %>' class="employee_check"  > -->
+        <div class="employee_info">
+            <p class="employee">First Name : <%= employee[i].first_name %></p>
+        </div>
+        <div class="employee_info">
+            <p class="employee">Last Name:  <%= employee[i].last_name %></p>
+        </div>
+        <div class="employee_info">
+            <p class="employee">Email : <%= employee[i].email %></p>
+        </div>
+        <div class="btns">
+            <button id="<%=employee[i]._id%>" first_name="<%= employee[i].first_name %>" last_name="<%= employee[i].last_name %>" email="<%= employee[i].email %>" class="edit_btn">Edit </button>        
+            <a href="employees/delete/<%=employee[i]._id%>">
+                <button  class="delete_btn">Detele</button>
+            </a>
+        </div>
+       
+    </div>
+   <%}%>
+</div>
